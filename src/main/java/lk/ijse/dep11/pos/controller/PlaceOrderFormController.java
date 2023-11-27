@@ -23,6 +23,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import lk.ijse.dep11.pos.db.ItemDataAccess;
+import lk.ijse.dep11.pos.tm.Item;
 
 public class PlaceOrderFormController {
     public AnchorPane root;
@@ -33,7 +35,7 @@ public class PlaceOrderFormController {
     public TableView tblOrderDetails;
     public JFXTextField txtUnitPrice;
     public JFXComboBox<Customer> cmbCustomerId;
-    public JFXComboBox cmbItemCode;
+    public JFXComboBox<Item> cmbItemCode;
     public JFXTextField txtQty;
     public Label lblId;
     public Label lblDate;
@@ -53,6 +55,25 @@ public class PlaceOrderFormController {
                 }else{
                     txtCustomerName.clear();
                     txtCustomerName.setDisable(true);
+                }
+            });
+            cmbItemCode.getItems().addAll(ItemDataAccess.getAllItems());
+            cmbItemCode.getSelectionModel().selectedItemProperty().addListener((ov, prev, cur) ->{
+                if (cur != null){
+                    txtDescription.setText(cur.getDescription());
+                    txtQtyOnHand.setText(cur.getQty() + "");
+                    txtUnitPrice.setText(cur.getUnitPrice().toString());
+
+                    for (TextField txt : new TextField[]{txtDescription, txtQtyOnHand, txtUnitPrice}) {
+                        txt.setDisable(false);
+                        txt.setEditable(false);
+                    }
+                    txtQty.setDisable(cur.getQty() == 0);
+                }else{
+                    for (TextField txt : new TextField[]{txtDescription, txtQtyOnHand, txtUnitPrice, txtQty}) {
+                        txt.setDisable(true);
+                        txt.clear();
+                    }
                 }
             });
         } catch (SQLException e) {

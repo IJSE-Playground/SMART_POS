@@ -24,6 +24,8 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.Optional;
+
 import lk.ijse.dep11.pos.db.ItemDataAccess;
 import lk.ijse.dep11.pos.tm.Item;
 
@@ -116,11 +118,20 @@ public class PlaceOrderFormController {
 
     public void btnAdd_OnAction(ActionEvent actionEvent) {
         Item selectedItem = cmbItemCode.getSelectionModel().getSelectedItem();
-        OrderItem newOrderItem = new OrderItem(selectedItem.getCode(), selectedItem.getDescription(),
-                Integer.parseInt(txtQty.getText()), selectedItem.getUnitPrice(),
-                new JFXButton("Delete"));
-        tblOrderDetails.getItems().add(newOrderItem);
-        selectedItem.setQty(selectedItem.getQty() - newOrderItem.getQty());
+        Optional<OrderItem> optOrderItem = tblOrderDetails.getItems().stream()
+                .filter(item -> selectedItem.getCode().equals(item.getCode())).findFirst();
+        if (optOrderItem.isEmpty()) {
+            OrderItem newOrderItem = new OrderItem(selectedItem.getCode(), selectedItem.getDescription(),
+                    Integer.parseInt(txtQty.getText()), selectedItem.getUnitPrice(),
+                    new JFXButton("Delete"));
+            tblOrderDetails.getItems().add(newOrderItem);
+            selectedItem.setQty(selectedItem.getQty() - newOrderItem.getQty());
+        }else{
+            OrderItem orderItem = (OrderItem) ((Optional<?>) optOrderItem).get();
+            orderItem.setQty(orderItem.getQty() +  Integer.parseInt(txtQty.getText()));
+            tblOrderDetails.refresh();
+            selectedItem.setQty(selectedItem.getQty() - Integer.parseInt(txtQty.getText()));
+        }
         cmbItemCode.getSelectionModel().clearSelection();
         cmbItemCode.requestFocus();
     }

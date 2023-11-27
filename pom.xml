@@ -40,10 +40,17 @@
             <version>5.8.1</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>net.sf.jasperreports</groupId>
+            <artifactId>jasperreports</artifactId>
+            <version>6.20.6</version>
+        </dependency>
+
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>RELEASE</version>
+            <version>1.18.28</version>
             <scope>compile</scope>
         </dependency>
 

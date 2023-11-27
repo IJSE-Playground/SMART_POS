@@ -32,8 +32,7 @@ class CustomerDataAccessTest {
         assertDoesNotThrow(()->{
             CustomerDataAccess.saveCustomer(new Customer("ABC", "Kasun", "Galle"));
             CustomerDataAccess.saveCustomer(new Customer("EDF", "Ruwan", "Galle"));
-            assertThrows(SQLException.class, ()-> CustomerDataAccess
-                    .saveCustomer(new Customer("ABC", "Kasun", "Galle")));
+            assertThrows(SQLException.class, ()-> CustomerDataAccess.saveCustomer(new Customer("ABC", "Kasun", "Galle")));
         });
     }
 

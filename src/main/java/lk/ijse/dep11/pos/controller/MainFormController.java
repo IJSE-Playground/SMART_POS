@@ -4,6 +4,7 @@ import javafx.animation.FadeTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,7 +19,6 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import javafx.event.Event;
 import lk.ijse.dep11.pos.AppInitializer;
 
 import java.io.IOException;
@@ -29,14 +29,6 @@ public class MainFormController implements Initializable {
 
     @FXML
     private AnchorPane root;
-    @FXML
-    private ImageView imgCustomer;
-    @FXML
-    private ImageView imgItem;
-    @FXML
-    private ImageView imgOrder;
-    @FXML
-    private ImageView imgViewOrders;
     @FXML
     private Label lblMenu;
     @FXML
@@ -138,10 +130,12 @@ public class MainFormController implements Initializable {
                 tt.setFromX(-subScene.getWidth());
                 tt.setToX(0);
                 tt.play();
+
                 Platform.runLater(()-> primaryStage.setResizable(false));
             }
         }
     }
+
     public static void navigateToMain(Node rootNode) throws IOException {
         Parent root = FXMLLoader.load(AppInitializer.class.getResource("/view/MainForm.fxml"));
         Scene scene = new Scene(root);
@@ -153,5 +147,4 @@ public class MainFormController implements Initializable {
         primaryStage.setOnCloseRequest(null);
         Platform.runLater(()-> primaryStage.setResizable(false));
     }
-
 }

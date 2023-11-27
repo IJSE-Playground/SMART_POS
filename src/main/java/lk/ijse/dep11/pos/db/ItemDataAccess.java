@@ -1,7 +1,5 @@
 package lk.ijse.dep11.pos.db;
-
 import lk.ijse.dep11.pos.tm.Item;
-
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

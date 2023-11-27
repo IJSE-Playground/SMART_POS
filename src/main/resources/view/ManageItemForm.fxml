@@ -40,7 +40,7 @@
                 <Font name="Lucida Sans Demibold" size="27.0" />
             </font>
         </Label>
-        <JFXButton id="btnAddNewCustomer" layoutX="518.0" layoutY="25.0" onAction="#btnAddNew_OnAction" prefHeight="35.0" prefWidth="122.0" style="-fx-cursor: hand;" text="+ NEW ITEM" />
+        <JFXButton fx:id="btnAddNew" id="btnAddNewCustomer" layoutX="518.0" layoutY="25.0" onAction="#btnAddNew_OnAction" prefHeight="35.0" prefWidth="122.0" style="-fx-cursor: hand;" text="+ NEW ITEM" />
         <VBox layoutX="17.0" layoutY="118.0" spacing="20.0">
             <children>
                 <JFXTextField fx:id="txtCode" labelFloat="true" prefHeight="28.0" prefWidth="615.0" promptText="Item Code :" />

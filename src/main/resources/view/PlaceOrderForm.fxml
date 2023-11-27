@@ -16,7 +16,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="654.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19.0.2.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.pos.controller.PlaceOrderFormController">
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="654.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.dep11.pos.controller.PlaceOrderFormController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="654.0">
             <fill>
@@ -35,7 +35,7 @@
                 <Cursor fx:constant="HAND" />
             </cursor>
         </ImageView>
-        <Label layoutX="95.0" layoutY="24.0" text="Place Order">
+        <Label layoutX="95.0" layoutY="24.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="PLACE ORDER">
             <font>
                 <Font name="Lucida Sans Demibold" size="27.0" />
             </font>
@@ -44,15 +44,16 @@
         <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="195.0" layoutY="132.0" prefHeight="28.0" prefWidth="437.0" promptText="Customer Name :" />
         <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="195.0" layoutY="178.0" prefHeight="28.0" prefWidth="437.0" promptText="Item Description :" />
         <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="17.0" layoutY="226.0" prefHeight="28.0" prefWidth="161.0" promptText="Qty. on Hand" />
-        <JFXButton id="btnSave" fx:id="btnSave" layoutX="558.0" layoutY="226.0" onAction="#btnAdd_OnAction" prefHeight="28.0" prefWidth="74.0" style="-fx-cursor: hand;" text="Add" />
-        <TableView fx:id="tblOrderDetails" layoutX="17.0" layoutY="280.0" prefHeight="189.0" prefWidth="620.0">
+        <JFXButton id="btnSave" fx:id="btnSave" layoutX="558.0" layoutY="226.0" onAction="#btnAdd_OnAction" prefHeight="28.0" prefWidth="74.0" style="-fx-cursor: hand;" text="ADD" />
+        <TableView fx:id="tblOrderDetails" layoutX="17.0" layoutY="280.0" prefHeight="196.0" prefWidth="620.0">
+
             <columns>
-                <TableColumn prefWidth="77.0" text="Code" />
-                <TableColumn prefWidth="174.0" text="Description" />
-                <TableColumn prefWidth="64.0" text="Qty" />
-                <TableColumn prefWidth="99.0" text="Unit Price" />
-                <TableColumn prefWidth="88.0" text="Total" />
-                <TableColumn prefWidth="99.0" text="Delete" />
+                <TableColumn prefWidth="77.0" style="-fx-font-size: 14px;" text="Code" />
+                <TableColumn prefWidth="174.0" style="-fx-font-size: 14px;" text="Description" />
+                <TableColumn prefWidth="64.0" style="-fx-font-size: 14px;" text="Qty" />
+                <TableColumn prefWidth="99.0" style="-fx-font-size: 14px;" text="Unit Price" />
+                <TableColumn prefWidth="88.0" style="-fx-font-size: 14px;" text="Total" />
+                <TableColumn prefWidth="99.0" style="-fx-font-size: 14px;" text="Delete" />
             </columns>
         </TableView>
         <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="195.0" layoutY="226.0" prefHeight="28.0" prefWidth="161.0" promptText="Unit Price" />
@@ -70,12 +71,12 @@
                 <Font size="17.0" />
             </font>
         </Label>
-        <Label fx:id="lblTotal" layoutX="22.0" layoutY="485.0" text="TOTAL : 0.00">
+        <Label fx:id="lblTotal" layoutX="17.0" layoutY="494.0" style="-fx-font-size: 22px; -fx-font-weight: bold;" text="TOTAL : 0.00">
             <font>
                 <Font size="32.0" />
             </font>
         </Label>
-        <JFXButton id="btnSave" fx:id="btnPlaceOrder" layoutX="519.0" layoutY="490.0" onAction="#btnPlaceOrder_OnAction" prefHeight="35.0" prefWidth="119.0" style="-fx-cursor: hand; -fx-background-color: orange; -fx-text-fill: black; -fx-font-size: 16px;" text="Place Order" />
+        <JFXButton id="btnSave" fx:id="btnPlaceOrder" layoutX="486.0" layoutY="490.0" onAction="#btnPlaceOrder_OnAction" prefHeight="35.0" prefWidth="152.0" style="-fx-cursor: hand; -fx-background-color: orange; -fx-text-fill: black; -fx-font-size: 16px;" text="PLACE ORDER" />
     </children>
     <stylesheets>
         <URL value="@../style/manageitemform.css" />

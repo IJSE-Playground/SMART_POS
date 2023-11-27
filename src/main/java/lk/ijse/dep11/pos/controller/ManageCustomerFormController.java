@@ -33,21 +33,17 @@ public class ManageCustomerFormController {
     public JFXButton btnAddNew;
 
     public void navigateToHome(MouseEvent mouseEvent) throws IOException {
-        URL resource = this.getClass().getResource("/view/MainForm.fxml");
-        Parent root = FXMLLoader.load(resource);
-        Scene scene = new Scene(root);
-        Stage primaryStage = (Stage) (this.root.getScene().getWindow());
-        primaryStage.setScene(scene);
-        primaryStage.centerOnScreen();
-        Platform.runLater(primaryStage::sizeToScene);
+        MainFormController.navigateToMain(root);
     }
 
     public void initialize(){
         tblCustomers.getColumns().get(0).setCellValueFactory(new PropertyValueFactory<>("id"));
+        tblCustomers.getColumns().get(0).setStyle("-fx-alignment: center;");
         tblCustomers.getColumns().get(1).setCellValueFactory(new PropertyValueFactory<>("name"));
         tblCustomers.getColumns().get(2).setCellValueFactory(new PropertyValueFactory<>("address"));
         txtCustomerId.setEditable(false);
         btnDelete.setDisable(true);
+        btnSave.setDefaultButton(true);
         btnAddNew.fire();
         try {
             tblCustomers.getItems().addAll(CustomerDataAccess.getAllCustomers());
@@ -58,16 +54,18 @@ public class ManageCustomerFormController {
 
         tblCustomers.getSelectionModel().selectedItemProperty().addListener((ov, prev, cur) ->{
             if (cur != null){
-                btnSave.setText("Update");
+                btnSave.setText("UPDATE");
                 btnDelete.setDisable(false);
                 txtCustomerId.setText(cur.getId());
                 txtCustomerName.setText(cur.getName());
                 txtCustomerAddress.setText(cur.getAddress());
             }else{
-                btnSave.setText("Save");
+                btnSave.setText("SAVE");
                 btnDelete.setDisable(true);
             }
         });
+
+        Platform.runLater(txtCustomerName::requestFocus);
 
 
 
@@ -129,9 +127,7 @@ public class ManageCustomerFormController {
             txtCustomerAddress.selectAll();
             return false;
         }
-
         return true;
-
     }
     public void btnDelete_OnAction(ActionEvent actionEvent) {
         try {
@@ -147,6 +143,5 @@ public class ManageCustomerFormController {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
     }
 }

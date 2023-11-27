@@ -144,7 +144,7 @@ public class PlaceOrderFormController {
 
     private void calculateOrderTotal(){
         Optional<BigDecimal> orderTotal = tblOrderDetails.getItems().stream().map(oi -> oi.getTotal()).reduce((prev, cur) -> prev.add(cur));
-        lblTotal.setText("Total: Rs. " + orderTotal.get().setScale(2));
+        lblTotal.setText("Total: Rs. " + orderTotal.orElseGet(()->BigDecimal.ZERO).setScale(2));
     }
 
     public void txtQty_OnAction(ActionEvent actionEvent) {

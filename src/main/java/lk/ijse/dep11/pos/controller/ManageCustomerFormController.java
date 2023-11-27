@@ -2,6 +2,7 @@ package lk.ijse.dep11.pos.controller;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -54,6 +55,21 @@ public class ManageCustomerFormController {
             new Alert(Alert.AlertType.ERROR, "Failed to load customers, try later!").show();
         }
 
+        tblCustomers.getSelectionModel().selectedItemProperty().addListener((ov, prev, cur) ->{
+            if (cur != null){
+                btnSave.setText("Update");
+                btnDelete.setDisable(false);
+                txtCustomerId.setText(cur.getId());
+                txtCustomerName.setText(cur.getName());
+                txtCustomerAddress.setText(cur.getAddress());
+            }else{
+                btnSave.setText("Save");
+                btnDelete.setDisable(true);
+            }
+        });
+
+
+
     }
 
     public void btnAddNew_OnAction(ActionEvent actionEvent) throws Exception{
@@ -82,8 +98,16 @@ public class ManageCustomerFormController {
         Customer customer = new Customer(txtCustomerId.getText(),
                 txtCustomerName.getText().strip(), txtCustomerAddress.getText().strip());
         try {
-            CustomerDataAccess.saveCustomer(customer);
-            tblCustomers.getItems().add(customer);
+            if (btnSave.getText().equals("Save")){
+                CustomerDataAccess.saveCustomer(customer);
+                tblCustomers.getItems().add(customer);
+            }else{
+                CustomerDataAccess.updateCustomer(customer);
+                ObservableList<Customer> customerList = tblCustomers.getItems();
+                Customer selectedCustomer = tblCustomers.getSelectionModel().getSelectedItem();
+                customerList.set(customerList.indexOf(selectedCustomer), customer);
+                tblCustomers.refresh();
+            }
             btnAddNew.fire();
         } catch (SQLException e) {
             e.printStackTrace();

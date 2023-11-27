@@ -73,9 +73,14 @@ public class PlaceOrderFormController {
                 }
             }
         });
+        txtQty.textProperty().addListener((ov, prevQty, curQty) -> {
+            Item selectedItem = cmbItemCode.getSelectionModel().getSelectedItem();
+            btnSave.setDisable(!(curQty.matches("\\d+") && Integer.parseInt(curQty) <= selectedItem.getQty()
+                    && Integer.parseInt(curQty) > 0));
+        });
     }
 
-    private void newOrder() throws  Exception{
+    private void newOrder() throws  IOException{
         for (TextField txt : new TextField[]{txtCustomerName, txtDescription, txtQty, txtQtyOnHand, txtUnitPrice}) {
             txt.clear();
             txt.setDisable(true);

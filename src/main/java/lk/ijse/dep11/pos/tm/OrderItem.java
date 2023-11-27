@@ -16,7 +16,7 @@ public class OrderItem implements Serializable {
     private String description;
     private int qty;
     private BigDecimal unitPrice;
-    private JFXButton btnDelete;
+    private transient JFXButton btnDelete;
 
     public BigDecimal getTotal() {
         return unitPrice.multiply(new BigDecimal(qty)).setScale(2);

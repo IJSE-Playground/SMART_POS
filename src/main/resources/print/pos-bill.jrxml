@@ -21,21 +21,21 @@
             <staticText>
                 <reportElement x="0" y="0" width="216" height="19" uuid="e270a211-4d41-48e0-afb6-0a4191acaf37"/>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;" size="16" isBold="true"/>
+                    <font fontName="Ubuntu;" size="16" isBold="true"/>
                 </textElement>
                 <text><![CDATA[Smart POS]]></text>
             </staticText>
             <staticText>
                 <reportElement x="0" y="20" width="216" height="20" uuid="97643533-f2c7-4239-8411-08ace4536e78"/>
                 <textElement textAlignment="Center" verticalAlignment="Top">
-                    <font fontName="Ubuntu&#xA;" size="10" isBold="true"/>
+                    <font fontName="Ubuntu;" size="10" isBold="true"/>
                 </textElement>
                 <text><![CDATA[Institute of Software Engineering]]></text>
             </staticText>
             <staticText>
                 <reportElement x="0" y="32" width="216" height="19" uuid="eb8ab53d-291c-47d5-999b-912fb139eb14"/>
                 <textElement textAlignment="Center" verticalAlignment="Top">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <text><![CDATA[Grace Peries Road, Panadura]]></text>
             </staticText>
@@ -46,28 +46,28 @@
             <staticText>
                 <reportElement x="0" y="0" width="90" height="19" uuid="d3e9cd25-525d-46b1-acfb-6f569a552efe"/>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <text><![CDATA[ID: ]]></text>
             </staticText>
             <staticText>
                 <reportElement x="0" y="20" width="90" height="19" uuid="1882dc2f-b234-48a9-b095-cbe4531e402e"/>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <text><![CDATA[Date: ]]></text>
             </staticText>
             <staticText>
                 <reportElement x="0" y="40" width="90" height="19" uuid="feba89c7-f109-4bd7-8a7c-a4f523c99e7f"/>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <text><![CDATA[Customer ID: ]]></text>
             </staticText>
             <staticText>
                 <reportElement x="0" y="59" width="90" height="19" uuid="12a0b54b-32e6-4c80-addf-33d6be016a5a"/>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <text><![CDATA[Customer Name: ]]></text>
             </staticText>
@@ -75,7 +75,7 @@
                 <reportElement x="90" y="0" width="126" height="19" uuid="4905f913-4ba3-4d25-9c6a-6f636eb08363"/>
                 <box leftPadding="2" rightPadding="0"/>
                 <textElement verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$P{id}]]></textFieldExpression>
             </textField>
@@ -83,7 +83,7 @@
                 <reportElement x="90" y="20" width="126" height="19" uuid="e494e191-13d1-4654-b42b-6ac21636ca07"/>
                 <box leftPadding="2" rightPadding="0"/>
                 <textElement verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$P{date}]]></textFieldExpression>
             </textField>
@@ -91,7 +91,7 @@
                 <reportElement x="90" y="40" width="126" height="19" uuid="c27b7367-e9f0-4f79-9500-78d9d18abc1a"/>
                 <box leftPadding="2" rightPadding="0"/>
                 <textElement verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$P{customer-id}]]></textFieldExpression>
             </textField>
@@ -99,7 +99,7 @@
                 <reportElement x="90" y="59" width="126" height="19" uuid="fd8f1112-608c-45a0-904b-7d69705e2863"/>
                 <box leftPadding="2" rightPadding="0"/>
                 <textElement verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$P{customer-name}]]></textFieldExpression>
             </textField>
@@ -117,7 +117,7 @@
                     <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
                 </box>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;" isBold="true"/>
+                    <font fontName="Ubuntu" isBold="true"/>
                 </textElement>
                 <text><![CDATA[NO]]></text>
             </staticText>
@@ -131,7 +131,7 @@
                     <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
                 </box>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;" isBold="true"/>
+                    <font fontName="Ubuntu" isBold="true"/>
                 </textElement>
                 <text><![CDATA[ITEM]]></text>
             </staticText>
@@ -145,7 +145,7 @@
                     <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
                 </box>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;" isBold="true"/>
+                    <font fontName="Ubuntu" isBold="true"/>
                 </textElement>
                 <text><![CDATA[QTY]]></text>
             </staticText>
@@ -159,7 +159,7 @@
                     <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
                 </box>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;" isBold="true"/>
+                    <font fontName="Ubuntu" isBold="true"/>
                 </textElement>
                 <text><![CDATA[PRICE]]></text>
             </staticText>
@@ -173,7 +173,7 @@
                     <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
                 </box>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;" isBold="true"/>
+                    <font fontName="Ubuntu" isBold="true"/>
                 </textElement>
                 <text><![CDATA[AMOUNT]]></text>
             </staticText>
@@ -184,14 +184,14 @@
             <textField>
                 <reportElement x="0" y="0" width="20" height="20" uuid="c101aca1-6102-481c-a0d0-029df67fb7e2"/>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="20" y="0" width="196" height="20" uuid="c0f14db3-27b9-4ba4-b7c7-f1bf8bd5035a"/>
                 <textElement verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
             </textField>
@@ -199,21 +199,21 @@
                 <reportElement x="0" y="20" width="70" height="20" uuid="8145efb0-3c1c-4439-9b32-59fbb585fd87"/>
                 <box leftPadding="1"/>
                 <textElement verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="70" y="20" width="30" height="20" uuid="9f3cb6cf-6505-4e1f-a4b7-4e99ada9a520"/>
                 <textElement textAlignment="Center" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu;"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
             </textField>
             <textField>
                 <reportElement x="100" y="20" width="50" height="20" uuid="824761df-f962-4070-8e32-baf312a45331"/>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{unitPrice}]]></textFieldExpression>
             </textField>
@@ -221,7 +221,7 @@
                 <reportElement x="150" y="20" width="66" height="20" uuid="9ccdd28b-2bc8-4012-840a-2c80b35709b5"/>
                 <box rightPadding="1"/>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$F{unitPrice}.multiply(new BigDecimal($F{qty})).setScale(2)]]></textFieldExpression>
             </textField>
@@ -239,7 +239,7 @@
                     <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
                 </box>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;" isBold="true"/>
+                    <font fontName="Ubuntu" isBold="true"/>
                 </textElement>
                 <text><![CDATA[Order Total: ]]></text>
             </staticText>
@@ -253,7 +253,7 @@
                     <rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
                 </box>
                 <textElement textAlignment="Right" verticalAlignment="Middle">
-                    <font fontName="Ubuntu&#xA;" isBold="true"/>
+                    <font fontName="Ubuntu" isBold="true"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
             </textField>
@@ -264,14 +264,14 @@
             <staticText>
                 <reportElement x="0" y="19" width="216" height="21" uuid="1dea5ca2-cb3d-4f20-a2a3-6002521d17cc"/>
                 <textElement textAlignment="Center">
-                    <font fontName="Ubuntu&#xA;"/>
+                    <font fontName="Ubuntu"/>
                 </textElement>
                 <text><![CDATA[Thank you, come again!]]></text>
             </staticText>
             <staticText>
                 <reportElement x="0" y="33" width="216" height="17" uuid="5f2507be-6857-4c44-b382-787bdb468d3f"/>
                 <textElement textAlignment="Center">
-                    <font fontName="Ubuntu&#xA;" size="8"/>
+                    <font fontName="Ubuntu" size="8"/>
                 </textElement>
                 <text><![CDATA[Copyright (c) 2023 DEP-11. All Rights Reserved.]]></text>
             </staticText>

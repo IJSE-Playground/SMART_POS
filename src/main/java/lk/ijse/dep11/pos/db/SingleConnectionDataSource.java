@@ -1,15 +1,10 @@
 package lk.ijse.dep11.pos.db;
-
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Properties;
 
 public class SingleConnectionDataSource {
@@ -29,6 +24,12 @@ public class SingleConnectionDataSource {
         }
     }
 
+    public static SingleConnectionDataSource getInstance() {
+        return (instance == null) ? (instance = new SingleConnectionDataSource()) : instance;
+    }
+
+
+
     private void generateSchema() throws Exception {
         URL url = getClass().getResource("/schema.sql");
         Path path = Paths.get(url.toURI());
@@ -37,9 +38,10 @@ public class SingleConnectionDataSource {
         connection.createStatement().execute(dbScript);
     }
 
-    public Connection getConnection(){ return connection; }
 
-    public static SingleConnectionDataSource getInstance() {
-        return (instance == null) ? (instance = new SingleConnectionDataSource()) : instance;
+    public Connection getConnection() {
+        return connection;
     }
+
+
 }

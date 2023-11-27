@@ -15,7 +15,7 @@
                 <Image url="@../asset/ijse-logo.gif" />
             </image>
         </ImageView>
-        <Label layoutX="161.0" layoutY="76.0" text="SMART POINT of SALE SYSTEM">
+        <Label layoutX="179.0" layoutY="76.0" text="SMART POINT of SALE SYSTEM">
             <font>
                 <Font name="System Bold" size="16.0" />
             </font>

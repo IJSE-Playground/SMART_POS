@@ -13,10 +13,10 @@ SMART POS is more than just a point-of-sale system; it's a tool that empowers yo
 Copyright &copy; 2023 DEP-11 <br>
 This project is licensed under this [MIT License](License.txt)
 
-![home](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/c77a64cd-d1e8-4f41-8ab6-80add440ff52)
-![manage-customers](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/4daabc9b-8d98-451c-80a4-971f84c4d893)
-![manage-items](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/85d96819-1c32-4376-aba1-fa94dc2785b1)
-![place-order](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/5fbb770c-1be2-425e-b760-0769f9d79ea5)
-![search-order](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/6683d404-953c-4590-905b-a311e43a2596)
+![home](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/bea19142-8395-4ae7-8582-0e622c81a5de)
+![manage-customers](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/a9658a82-1380-4d0b-a9ac-cfae3b33857d)
+![manage-items](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/6f2fb113-4950-4b3e-9d36-a8a27c325ff8)
+![place-order](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/b8354664-13d6-446a-bd02-a3508839e987)
+![search-order](https://github.com/IJSE-Playground/SMART_POS/assets/75952849/9756603b-b5d2-4948-92b1-e394eb6826c9)
 
 

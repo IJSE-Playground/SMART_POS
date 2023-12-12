@@ -8,6 +8,7 @@ Technologies and Tools Used:
 * Languages: Java
 * Database: PostgreSQL
 * UI Framework: JavaFX
+* Styles: CSS
 * Material Design: JFoenix
 * Reporting: Jasper Reports
 * Testing: JUnit

@@ -2,10 +2,18 @@
 
 Welcome to SMART POS, the next evolution in retail point-of-sale software! Our intuitive, all-in-one solution is designed to transform the way you do business, bringing cutting-edge efficiency to every aspect of your operations. Elevate your sales experience with SMART POS.
 
-## Elevate Your Business with SMART POS
+The Smart POS Desktop App successfully modernized the retail point of sale process, offering a feature-rich and reliable solution. The integration of Java, JavaFX, and other technologies contributed to a scalable and maintainable application. The use of JUnit for testing and Maven for build management ensured high-quality code and streamlined development processes. This project exemplifies my ability to architect, develop, and deliver robust desktop applications using a modern tech stack.
 
-SMART POS is more than just a point-of-sale system; it's a tool that empowers your business to thrive in the modern retail landscape. Revolutionize the way you manage transactions, inventory, and customer relations with SMART POS. Welcome to the future of retail management!
-
+Technologies and Tools Used:
+* Languages: Java
+* Database: PostgreSQL
+* UI Framework: JavaFX
+* Material Design: JFoenix
+* Reporting: Jasper Reports
+* Testing: JUnit
+* Build Tool: Maven
+* Code Simplification: Lombok
+    
 ### Version
 0.1.0
 
